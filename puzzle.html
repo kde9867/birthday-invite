@@ -127,6 +127,9 @@ h1 span{color:var(--tomato)}
     <h1>Birthday <span>Puzzle</span></h1>
     <p class="ask">Put our party back together..</p>
   </header>
+  <div class="bar">
+    <button class="chip" type="button" id="peek" aria-pressed="false">Peek</button>
+  </div>
   <p class="status" id="status" aria-live="polite"></p>
   <div id="area" aria-label="Puzzle board. Drag the pieces to where they belong.">
     <div id="board"><div id="ghost"></div><div id="full"></div></div>
@@ -406,6 +409,7 @@ h1 span{color:var(--tomato)}
   }
 
   /* ---------------- controls ---------------- */
+  $('peek').addEventListener('click',function(){var on=ghost.classList.toggle('on');this.setAttribute('aria-pressed',on)});
   $('again').addEventListener('click',start);$('again2').addEventListener('click',start);
   $('close').addEventListener('click',closeStage);
   $('reopen').addEventListener('click',openStage);
