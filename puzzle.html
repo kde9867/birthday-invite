@@ -127,9 +127,6 @@ h1 span{color:var(--tomato)}
     <h1>Birthday <span>Puzzle</span></h1>
     <p class="ask">Put our party back together..</p>
   </header>
-  <div class="bar">
-    <button class="chip" type="button" id="peek" aria-pressed="false">Peek</button>
-  </div>
   <p class="status" id="status" aria-live="polite"></p>
   <div id="area" aria-label="Puzzle board. Drag the pieces to where they belong.">
     <div id="board"><div id="ghost"></div><div id="full"></div></div>
@@ -210,7 +207,6 @@ h1 span{color:var(--tomato)}
     }
     pieces.sort(function(){return Math.random()-.5});
     pieces.forEach(function(p,i){p.z=10+i});zc=10+pieces.length;
-    document.querySelectorAll('[data-n]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.n===n)});
     S=0;layout();
   }
   function side(p,x0,y0,x1,y1,s,tab){
@@ -410,8 +406,6 @@ h1 span{color:var(--tomato)}
   }
 
   /* ---------------- controls ---------------- */
-  document.querySelectorAll('[data-n]').forEach(function(b){b.addEventListener('click',function(){n=+b.dataset.n;start()})});
-  $('peek').addEventListener('click',function(){var on=ghost.classList.toggle('on');this.setAttribute('aria-pressed',on)});
   $('again').addEventListener('click',start);$('again2').addEventListener('click',start);
   $('close').addEventListener('click',closeStage);
   $('reopen').addEventListener('click',openStage);
