@@ -87,7 +87,7 @@ h1 span{color:var(--tomato)}
 .ic{width:calc(34px*var(--u));height:calc(34px*var(--u));flex:none}
 .cap{flex:1;min-width:0;font:400 calc(var(--fs)*var(--u)*1px)/.95 var(--cap);letter-spacing:.01em}
 .t{display:inline-block;white-space:nowrap}
-.r-time .cap{color:var(--red)}
+.r-time .cap{color:var(--red);font-family:var(--display);line-height:1.05;letter-spacing:.02em;-webkit-text-stroke:calc(3px*var(--u)) #151515;paint-order:stroke fill;text-shadow:calc(4px*var(--u)) calc(5px*var(--u)) 0 rgba(21,21,21,.18);transform:rotate(-3deg);transform-origin:0 70%}
 .r-place .t{background:linear-gradient(transparent 64%,rgba(200,22,29,.3) 64% 94%,transparent 94%);padding-inline:.05em}
 .n20{position:relative;display:inline-block}
 .ring{position:absolute;left:50%;top:50%;width:1.95em;height:1.4em;transform:translate(-50%,-50%);overflow:visible;pointer-events:none}
@@ -161,7 +161,7 @@ h1 span{color:var(--tomato)}
       </div>
       <div class="row r-time" style="--i:1">
         <svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="17" r="11" fill="#fff" stroke="#151515" stroke-width="2.5"/><path d="M16 10v7l5 3" fill="none" stroke="#151515" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 8l4-4M27 8l-4-4" stroke="#c8161d" stroke-width="3.5" stroke-linecap="round"/></svg>
-        <span class="cap fit" style="--fs:136"><span class="t">8 PM</span></span>
+        <span class="cap fit" style="--fs:112"><span class="t">8 PM</span></span>
       </div>
       <div class="row r-place" style="--i:2">
         <svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 29S6 19 6 12.5a10 10 0 0 1 20 0C26 19 16 29 16 29z" fill="#c8161d" stroke="#151515" stroke-width="2.5" stroke-linejoin="round"/><circle cx="16" cy="12.5" r="3.6" fill="#fff"/></svg>
